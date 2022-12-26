@@ -1,3 +1,4 @@
-#three-canvas-container {
-  height: 100vh;
+.canvas {
+  height: 500px;
+  background-color: red;
 }
