@@ -14,7 +14,6 @@ function carRotation() {
       carRef.current.rotation.z += 0.005;
     }
   });
-
   return <Car ref={carRef} />;
 }
 
