@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { Suspense } from "react";
 import Box from "./components/Box";
 import { OrbitControls } from "@react-three/drei";
 import "./App.css";
@@ -17,8 +17,10 @@ function App() {
 
           <directionalLight position={[-2, 5, 2]} intensity={1} />
           {/* directionalLight = 빛 방향 */}
-
-          <Box />
+          <Suspense fallback={null}>
+            {/* 컨텐츠 검색을 못할경우 대비책 Suspense */}
+            <Box />
+          </Suspense>
         </Canvas>
       </div>
     </>
